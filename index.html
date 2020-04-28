@@ -17,58 +17,29 @@
         .grid-container {
             display: grid;
             position: relative;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 4px 4px;
-            grid-template-areas: "intro first first""second third fourth";
+            grid-template-areas:
+                "first first first second second second"
+                "third third fourth fourth fifth fifth";
             height: 100%;
             margin: 10px;
         }
 
-        .intro {
-            grid-area: intro;
-        }
-
-        .intro .title-container {
-            bottom: 0;
-            position: absolute;
-        }
-
-        .intro .title {
-            text-transform: uppercase;
-            font-family: Raleway;
-            font-size: 48px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1;
-            letter-spacing: normal;
-            color: rgba(0, 0, 0, 0.8);
-        }
-
-        .intro p {
-            font-family: Raleway;
-            font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.25;
-            letter-spacing: normal;
-            color: rgba(0, 0, 0, 0.4);
-        }
-
         .card {
-            height: 200px;
+            height: 212px;
         }
 
         .card img {
             width: 100%;
             height: 100%;
+            border-radius: 5px;
         }
 
         .card .title-container {
             position: absolute;
-            top: 50%;
+            top: 20%;
             left: 5%;
             transform: translate(-5%, -50%);
             z-index: 1;
@@ -79,16 +50,16 @@
 
         .card .title-container h3 {
             font-size: 14px;
-            font-weight: 500;
+            font-weight: normal;
             font-stretch: normal;
             font-style: normal;
-            line-height: 1.5;
+            line-height: 1.14;
             letter-spacing: normal;
         }
 
         .card .title-container h2 {
             font-size: 22px;
-            font-weight: 600;
+            font-weight: 500;
             font-stretch: normal;
             font-style: normal;
             line-height: 1.09;
@@ -107,13 +78,25 @@
             font-size: 23px;
         }
 
+        .card .price {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            transform: translate(-5%, -20%);
+            z-index: 1;
+            color: #fff;
+            text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+        }
+
         .first {
             grid-area: first;
-            height: 320px;
+            height: 296px;
         }
 
         .second {
             grid-area: second;
+            height: 296px;
         }
 
         .third {
@@ -122,6 +105,10 @@
 
         .fourth {
             grid-area: fourth;
+        }
+
+        .fifth {
+            grid-area: fifth;
         }
 
         /* For presentation only, no need to copy the code below */
@@ -140,20 +127,12 @@
 
 <body>
     <div class="grid-container">
-        <div class="intro">
-            <div class="title-container">
-                <h1 class="title">travel reviews</h1>
-                <p>
-                    Creatrip Local's insights on food.<br>
-                    Culture, News, Travel and more in Korea!
-                </p>
-            </div>
-        </div>
         <a href="#" class="card first">
             <div class="title-container">
                 <h3>Seoul Shinchon</h3>
                 <h2>Cheese Cake Cafe</h2>
             </div>
+            <div class="price">$2,400</div>
             <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80"
                 alt="cheese cake cafe">
         </a>
@@ -162,6 +141,7 @@
                 <h3>Seoul Hapjeong</h3>
                 <h2>Oshechil</h2>
             </div>
+            <div class="price">$2,400</div>
             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=60"
                 alt="Oshechil">
         </a>
@@ -170,6 +150,7 @@
                 <h3>Seoul Shinchon</h3>
                 <h2>Blah Blah</h2>
             </div>
+            <div class="price">$2,400</div>
             <img src="https://images.unsplash.com/photo-1541173109020-9c5d8a48e169?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
                 alt="Blah Blah">
         </a>
@@ -178,6 +159,16 @@
                 <h3>Seoul Hongdae</h3>
                 <h2>Playground</h2>
             </div>
+            <div class="price">$2,400</div>
+            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
+                alt="Playground">
+        </a>
+        <a href="#" class="card fifth">
+            <div class="title-container">
+                <h3>Seoul Hongdae</h3>
+                <h2>Playground</h2>
+            </div>
+            <div class="price">$2,400</div>
             <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
                 alt="Playground">
         </a>
